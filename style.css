@@ -1,0 +1,89 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+#game-container {
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    background-color: #FFDAB9;
+    border-radius: 10%;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fd54db;
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.card.flipped,
+.card.matched {
+    background-color: #E6E6FA;
+    cursor: default;
+}
+
+.card.hidden {
+    background-color: #ccc;
+    cursor: default;
+    pointer-events: none;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f7f9fb;
+    color: #292929;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #fd54db;
+    border-radius: 30px;
+}
+
+/* Контейнер для фейерверков */
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
